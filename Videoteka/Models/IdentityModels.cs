@@ -20,6 +20,10 @@ namespace Videoteka.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        public DbSet<Kupac> Kupci { get; set; }
+
+        public DbSet<Film> Films { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
