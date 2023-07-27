@@ -6,11 +6,12 @@ using System.Web;
 
 namespace Videoteka.Models
 {
-    public class Zanr
-    {
+    public class TipKupca
+    {   
         public byte Id { get; set; }
 
-        [StringLength(100)]
+
+        [StringLength(50)]
         public string Name { get; set; }
     }
 }

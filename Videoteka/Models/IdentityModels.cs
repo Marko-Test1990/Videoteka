@@ -26,6 +26,12 @@ namespace Videoteka.Models
         public DbSet<Film> Films { get; set; }
 
         public DbSet<Zanr> Zanrovi { get; set; }
+
+        public DbSet<TipClanstva> TipClanstava { get; set; }
+
+        public DbSet<TipKupca> tipKupcas { get; set; }
+
+        public DbSet<Pozajmica> pozajmice { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
