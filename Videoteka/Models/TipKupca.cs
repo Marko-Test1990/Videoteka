@@ -12,6 +12,6 @@ namespace Videoteka.Models
 
 
         [StringLength(50)]
-        public string Name { get; set; }
+        public string Naziv { get; set; }
     }
 }

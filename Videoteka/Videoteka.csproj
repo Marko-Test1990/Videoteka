@@ -220,6 +220,22 @@
     <Compile Include="Migrations\202307271505004_KreiranjePozajmica.designer.cs">
       <DependentUpon>202307271505004_KreiranjePozajmica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307271532011_PopulateTipKupca.cs" />
+    <Compile Include="Migrations\202307271532011_PopulateTipKupca.designer.cs">
+      <DependentUpon>202307271532011_PopulateTipKupca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307271550091_TipKupcaPromenaNameUNaziv.cs" />
+    <Compile Include="Migrations\202307271550091_TipKupcaPromenaNameUNaziv.designer.cs">
+      <DependentUpon>202307271550091_TipKupcaPromenaNameUNaziv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307271551149_PopulateTipKupcaNakonPromeneImenaKolone.cs" />
+    <Compile Include="Migrations\202307271551149_PopulateTipKupcaNakonPromeneImenaKolone.designer.cs">
+      <DependentUpon>202307271551149_PopulateTipKupcaNakonPromeneImenaKolone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307271600515_PopulateTipClanstva.cs" />
+    <Compile Include="Migrations\202307271600515_PopulateTipClanstva.designer.cs">
+      <DependentUpon>202307271600515_PopulateTipClanstva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Film.cs" />
@@ -371,6 +387,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307271505004_KreiranjePozajmica.resx">
       <DependentUpon>202307271505004_KreiranjePozajmica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307271532011_PopulateTipKupca.resx">
+      <DependentUpon>202307271532011_PopulateTipKupca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307271550091_TipKupcaPromenaNameUNaziv.resx">
+      <DependentUpon>202307271550091_TipKupcaPromenaNameUNaziv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307271551149_PopulateTipKupcaNakonPromeneImenaKolone.resx">
+      <DependentUpon>202307271551149_PopulateTipKupcaNakonPromeneImenaKolone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307271600515_PopulateTipClanstva.resx">
+      <DependentUpon>202307271600515_PopulateTipClanstva.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
