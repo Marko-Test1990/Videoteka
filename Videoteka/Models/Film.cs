@@ -9,5 +9,13 @@ namespace Videoteka.Models
     {
         public int Id { get; set; }
         public string Naziv { get; set; }
+
+        public DateTime? DatumUnosa { get; set; }
+
+        public DateTime? DatumIzdanja { get; set; }
+
+        public byte BrojNaStanju { get; set; }
+
+        public byte BrojDostupnih { get; set; }
     }
 }

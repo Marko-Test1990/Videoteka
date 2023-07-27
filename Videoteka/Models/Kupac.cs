@@ -9,5 +9,9 @@ namespace Videoteka.Models
     {
         public int Id { get; set; }
         public string Ime { get; set; }
+
+        public bool PrimaObavjestenja { get; set; }
+
+        public DateTime? DatumRodjenja { get; set; }
     }
 }

@@ -184,6 +184,14 @@
     <Compile Include="Migrations\202307261529519_FilmIKupacOsnovniModel.designer.cs">
       <DependentUpon>202307261529519_FilmIKupacOsnovniModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307271419099_KupacProsirenObavjestenjaIDatumRodjenja.cs" />
+    <Compile Include="Migrations\202307271419099_KupacProsirenObavjestenjaIDatumRodjenja.designer.cs">
+      <DependentUpon>202307271419099_KupacProsirenObavjestenjaIDatumRodjenja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307271427099_FilmProsirenDatumUnosaDatumIzdanjaBrojNaStanjuIBrojDostupnih.cs" />
+    <Compile Include="Migrations\202307271427099_FilmProsirenDatumUnosaDatumIzdanjaBrojNaStanjuIBrojDostupnih.designer.cs">
+      <DependentUpon>202307271427099_FilmProsirenDatumUnosaDatumIzdanjaBrojNaStanjuIBrojDostupnih.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Film.cs" />
@@ -304,6 +312,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307261529519_FilmIKupacOsnovniModel.resx">
       <DependentUpon>202307261529519_FilmIKupacOsnovniModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307271419099_KupacProsirenObavjestenjaIDatumRodjenja.resx">
+      <DependentUpon>202307271419099_KupacProsirenObavjestenjaIDatumRodjenja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307271427099_FilmProsirenDatumUnosaDatumIzdanjaBrojNaStanjuIBrojDostupnih.resx">
+      <DependentUpon>202307271427099_FilmProsirenDatumUnosaDatumIzdanjaBrojNaStanjuIBrojDostupnih.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
