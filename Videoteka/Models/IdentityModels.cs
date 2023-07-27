@@ -24,6 +24,8 @@ namespace Videoteka.Models
         public DbSet<Kupac> Kupci { get; set; }
 
         public DbSet<Film> Films { get; set; }
+
+        public DbSet<Zanr> Zanrovi { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

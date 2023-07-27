@@ -192,12 +192,25 @@
     <Compile Include="Migrations\202307271427099_FilmProsirenDatumUnosaDatumIzdanjaBrojNaStanjuIBrojDostupnih.designer.cs">
       <DependentUpon>202307271427099_FilmProsirenDatumUnosaDatumIzdanjaBrojNaStanjuIBrojDostupnih.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307271431451_DodataKlasaZanr.cs" />
+    <Compile Include="Migrations\202307271431451_DodataKlasaZanr.designer.cs">
+      <DependentUpon>202307271431451_DodataKlasaZanr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307271435123_DodataKlasaZanr1.cs" />
+    <Compile Include="Migrations\202307271435123_DodataKlasaZanr1.designer.cs">
+      <DependentUpon>202307271435123_DodataKlasaZanr1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307271438216_PovezivanjeFilmIZanr.cs" />
+    <Compile Include="Migrations\202307271438216_PovezivanjeFilmIZanr.designer.cs">
+      <DependentUpon>202307271438216_PovezivanjeFilmIZanr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Film.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kupac.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Zanr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -318,6 +331,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307271427099_FilmProsirenDatumUnosaDatumIzdanjaBrojNaStanjuIBrojDostupnih.resx">
       <DependentUpon>202307271427099_FilmProsirenDatumUnosaDatumIzdanjaBrojNaStanjuIBrojDostupnih.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307271431451_DodataKlasaZanr.resx">
+      <DependentUpon>202307271431451_DodataKlasaZanr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307271435123_DodataKlasaZanr1.resx">
+      <DependentUpon>202307271435123_DodataKlasaZanr1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307271438216_PovezivanjeFilmIZanr.resx">
+      <DependentUpon>202307271438216_PovezivanjeFilmIZanr.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

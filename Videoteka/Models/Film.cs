@@ -10,6 +10,10 @@ namespace Videoteka.Models
         public int Id { get; set; }
         public string Naziv { get; set; }
 
+        public Zanr Zanr { get; set; }
+
+        public byte ZanrId { get; set; }
+
         public DateTime? DatumUnosa { get; set; }
 
         public DateTime? DatumIzdanja { get; set; }
