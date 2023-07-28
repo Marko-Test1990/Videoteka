@@ -1,8 +1,32 @@
-﻿@model Videoteka.Models.Kupac
+﻿@model IEnumerable<Videoteka.Models.Kupac>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Ime</h2>
+<h2>Kupci</h2>
+@if (!Model.Any())
+{
+    <p>Nemamo kupaca</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Kupci</th>
+                <th>Tip Clanstva</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var kupci in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(kupci.Ime, "Detalji", "Kupac", new { id = kupci.Id }, null)</td>
+                    <td>@kupci.TipKupca.Naziv</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
 
