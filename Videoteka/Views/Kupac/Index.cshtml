@@ -5,6 +5,9 @@
 }
 
 <h2>Kupci</h2>
+<p>
+    @Html.ActionLink("Novi Kupac", "Novi", "Kupac", null, new { @class = "btn btn-primary" })
+</p>
 @if (!Model.Any())
 {
     <p>Nemamo kupaca</p>
@@ -22,7 +25,7 @@ else
             @foreach (var kupci in Model)
             {
                 <tr>
-                    <td>@Html.ActionLink(kupci.Ime, "Detalji", "Kupac", new { id = kupci.Id }, null)</td>
+                    <td>@Html.ActionLink(kupci.Ime, "Izmjena", "Kupac", new { id = kupci.Id }, null)</td>
                     <td>@kupci.TipKupca.Naziv</td>
                 </tr>
             }

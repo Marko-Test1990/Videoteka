@@ -15,13 +15,17 @@ namespace Videoteka.Models
 
         public bool PrimaObavjestenja { get; set; }
 
+        [Display(Name = "Datum rođenja")]
         public DateTime? DatumRodjenja { get; set; }
-
+        
         public TipClanstva TipClanstva { get; set; }
 
+        [Display(Name = "Tip Clanstva")]
         public byte TipClanstvaId { get; set; }
 
         public TipKupca TipKupca { get; set;}
+
+        [Display(Name = "Tip Kupca")]
         public byte TipKupcaId { get;set; }
     }
 }
