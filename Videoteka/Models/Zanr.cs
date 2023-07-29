@@ -11,6 +11,6 @@ namespace Videoteka.Models
         public byte Id { get; set; }
 
         [StringLength(100)]
-        public string Name { get; set; }
+        public string Naziv { get; set; }
     }
 }
