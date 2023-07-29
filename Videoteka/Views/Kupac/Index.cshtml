@@ -18,6 +18,9 @@ else
         <thead>
             <tr>
                 <th>Kupci</th>
+                <th>Prima Obavestenja</th>
+                <th>Datum Rodjenja</th>
+                <th>Tip Kupca</th>
                 <th>Tip Clanstva</th>
             </tr>
         </thead>
@@ -26,7 +29,10 @@ else
             {
                 <tr>
                     <td>@Html.ActionLink(kupci.Ime, "Izmjena", "Kupac", new { id = kupci.Id }, null)</td>
+                    <td>@(kupci.PrimaObavjestenja ? "Da" : "Ne")</td>
+                    <td>@kupci.DatumRodjenja</td>
                     <td>@kupci.TipKupca.Naziv</td>
+                    <td>@kupci.TipClanstva.Naziv</td>
                 </tr>
             }
         </tbody>

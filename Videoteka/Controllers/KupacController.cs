@@ -58,7 +58,7 @@ namespace Videoteka.Controllers
         // GET: Kupac
         public ActionResult Index()
         {
-            var kupac = _context.Kupci.Include(c => c.TipKupca).ToList();
+            var kupac = _context.Kupci.Include(c => c.TipKupca).Include(c => c.TipClanstva).ToList();
 
             return View(kupac);
         }

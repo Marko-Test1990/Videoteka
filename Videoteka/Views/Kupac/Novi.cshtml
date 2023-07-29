@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Novi Kupac</h2>
+<h2>@Model.naslov</h2>
 
 @using (Html.BeginForm("Sacuvaj", "Kupac"))
 {

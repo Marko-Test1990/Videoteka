@@ -11,5 +11,16 @@ namespace Videoteka.ViewModels
         public IEnumerable<TipClanstva> tipClanstvas { get; set; }
         public IEnumerable<TipKupca> tipKupcas { get; set; }
         public Kupac kupac { get; set;}
+
+        public string naslov 
+        {
+            get 
+            {
+                if (kupac != null && kupac.Id != 0)
+                    return "Izmijeni Kupaca";
+                else
+                    return "Novi Kupac";
+            }
+        }
     }
 }
