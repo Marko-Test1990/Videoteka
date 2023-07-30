@@ -10,6 +10,7 @@ namespace Videoteka.Models
     {
         public int Id { get; set; }
 
+        [Required(ErrorMessage ="Ime Kupca je obavezno")]
         [StringLength(255)]
         public string Ime { get; set; }
 
@@ -20,11 +21,13 @@ namespace Videoteka.Models
         
         public TipClanstva TipClanstva { get; set; }
 
+        [Required(ErrorMessage ="Tip Clanstva je obavezan")]
         [Display(Name = "Tip Clanstva")]
         public byte TipClanstvaId { get; set; }
 
         public TipKupca TipKupca { get; set;}
 
+        [Required(ErrorMessage ="Tip Kupca je obavezan")]
         [Display(Name = "Tip Kupca")]
         public byte TipKupcaId { get;set; }
     }

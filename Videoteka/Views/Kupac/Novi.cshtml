@@ -11,6 +11,7 @@
     <div class="form-group">
         @Html.LabelFor(m => m.kupac.Ime)
         @Html.TextBoxFor(m => m.kupac.Ime, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.kupac.Ime)
     </div>
 
     
@@ -23,12 +24,14 @@
     <div class="form-group">
         @Html.LabelFor(m => m.kupac.TipClanstvaId)
         @Html.DropDownListFor(m => m.kupac.TipClanstvaId, new SelectList(Model.tipClanstvas, "Id", "Naziv"), "Izaberite Tip Clanstva", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.kupac.TipClanstvaId)
     </div>
 
     
     <div class="form-group">
         @Html.LabelFor(m => m.kupac.TipKupcaId)
         @Html.DropDownListFor(m => m.kupac.TipKupcaId, new SelectList(Model.tipKupcas, "Id", "Naziv"), "Izaberite Tip Kupca", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.kupac.TipKupcaId)
     </div>
 
     
@@ -39,6 +42,7 @@
     </div>
     
     @Html.HiddenFor(m => m.kupac.Id)
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Sačuvaj</button>
 }
 

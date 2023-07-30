@@ -11,11 +11,13 @@
     <div class="form-group">
         @Html.LabelFor(m => m.film.Naziv)
         @Html.TextBoxFor(m => m.film.Naziv, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.film.Naziv)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.film.ZanrId)
         @Html.DropDownListFor(m => m.film.ZanrId, new SelectList(Model.Zanrovi, "Id", "Naziv"), "Izaberite Zanr", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.film.ZanrId)
     </div>
 
     <div class="form-group">
@@ -31,16 +33,19 @@
     <div class="form-group">
         @Html.LabelFor(m => m.film.BrojNaStanju)
         @Html.TextBoxFor(m => m.film.BrojNaStanju, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.film.BrojNaStanju)
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.film.BrojDostupnih)
         @Html.TextBoxFor(m => m.film.BrojDostupnih, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.film.BrojDostupnih)
     </div>
 
 
 
     @Html.HiddenFor(m => m.film.Id)
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Sačuvaj</button>
 }
 

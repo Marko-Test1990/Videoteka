@@ -37,8 +37,20 @@ namespace Videoteka.Controllers
             return View(viewModel);
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Sacuvaj(Kupac kupac) 
-        {   
+        {
+            if (!ModelState.IsValid) 
+            {
+                var viewModel = new KupacFormViewModel
+                {
+                    kupac = kupac,
+                    tipClanstvas = _context.TipClanstava.ToList(),
+                    tipKupcas = _context.tipKupcas.ToList()
+                };
+
+                return View("Novi",viewModel);
+            }
             if(kupac.Id==0)
                 _context.Kupci.Add(kupac);
             else 

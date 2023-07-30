@@ -34,8 +34,19 @@ namespace Videoteka.Controllers
             return View(viewModel); 
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Sacuvaj(Film film)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new FilmFormViewModel
+                {
+                    film = film,
+                    Zanrovi= _context.Zanrovi.ToList()                    
+                };
+
+                return View("Novi", viewModel);
+            }
             if (film.Id == 0)
                 _context.Films.Add(film);
             else

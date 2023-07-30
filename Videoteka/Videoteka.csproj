@@ -240,6 +240,10 @@
     <Compile Include="Migrations\202307291348356_ZanrPromenaKoloneNameUNaziv.designer.cs">
       <DependentUpon>202307291348356_ZanrPromenaKoloneNameUNaziv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202307302100296_FilmNazivIKupacImeRequired.cs" />
+    <Compile Include="Migrations\202307302100296_FilmNazivIKupacImeRequired.designer.cs">
+      <DependentUpon>202307302100296_FilmNazivIKupacImeRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Film.cs" />
@@ -412,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307291348356_ZanrPromenaKoloneNameUNaziv.resx">
       <DependentUpon>202307291348356_ZanrPromenaKoloneNameUNaziv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307302100296_FilmNazivIKupacImeRequired.resx">
+      <DependentUpon>202307302100296_FilmNazivIKupacImeRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
