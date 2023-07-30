@@ -15,14 +15,19 @@ namespace Videoteka.Models
 
         public Zanr Zanr { get; set; }
 
+        [Display(Name = "Zanr")]
         public byte ZanrId { get; set; }
 
+        [Display(Name = "Datum Unosa")]
         public DateTime? DatumUnosa { get; set; }
 
+        [Display(Name = "Datum Izdanja")]
         public DateTime? DatumIzdanja { get; set; }
 
+        [Display(Name = "Broj na Stanju")]
         public byte BrojNaStanju { get; set; }
 
+        [Display(Name = "Broj Dostupnih")]
         public byte BrojDostupnih { get; set; }
     }
 }

@@ -1,0 +1,47 @@
+﻿@model Videoteka.ViewModels.FilmFormViewModel
+@{
+    ViewBag.Title = "Novi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.naslov</h2>
+
+@using (Html.BeginForm("Sacuvaj", "Film"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.film.Naziv)
+        @Html.TextBoxFor(m => m.film.Naziv, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.film.ZanrId)
+        @Html.DropDownListFor(m => m.film.ZanrId, new SelectList(Model.Zanrovi, "Id", "Naziv"), "Izaberite Zanr", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.film.DatumUnosa)
+        @Html.TextBoxFor(m => m.film.DatumUnosa, "{0:d MMM YYYY}", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.film.DatumIzdanja)
+        @Html.TextBoxFor(m => m.film.DatumIzdanja, "{0:d MMM YYYY}", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.film.BrojNaStanju)
+        @Html.TextBoxFor(m => m.film.BrojNaStanju, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.film.BrojDostupnih)
+        @Html.TextBoxFor(m => m.film.BrojDostupnih, new { @class = "form-control" })
+    </div>
+
+
+
+    @Html.HiddenFor(m => m.film.Id)
+    <button type="submit" class="btn btn-primary">Sačuvaj</button>
+}
+
+
