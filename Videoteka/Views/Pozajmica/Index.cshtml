@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Videoteka.Models.Pozajmica>
+@{ 
+   ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Pozajmica</h2>
+
+@if (!Model.Any())
+{
+    <p>Nemamo Filmova</p>
+}
+else
+{
+     <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Kupac</th>
+                <th>Film</th>
+                <th>Datum Pozajmice</th>
+                <th>Datum Vracanja</th>
+                <th>Napomena</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pozajmica in Model)
+            {
+                <tr>
+                    <td>@pozajmica.Kupac.Ime</td>
+                    <td>@pozajmica.Film.Naziv</td>
+                    <td>@pozajmica.DatumPozajmice</td>
+                    <td>@pozajmica.DatumVracanja</td>
+                    <td>@pozajmica.Napomena</td>
+                    
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
