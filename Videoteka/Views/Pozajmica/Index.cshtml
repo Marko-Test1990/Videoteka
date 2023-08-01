@@ -12,7 +12,7 @@
 }
 else
 {
-     <table class="table table-bordered table-hover">
+     <table id="pozajmice" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Kupac</th>
@@ -20,7 +20,7 @@ else
                 <th>Datum Pozajmice</th>
                 <th>Datum Vracanja</th>
                 <th>Napomena</th>
-                
+                <th>Izbrisi</th>
             </tr>
         </thead>
         <tbody>
@@ -32,10 +32,35 @@ else
                     <td>@pozajmica.DatumPozajmice</td>
                     <td>@pozajmica.DatumVracanja</td>
                     <td>@pozajmica.Napomena</td>
-                    
+                    <th>
+                        <button data-pozajmica-id="@pozajmica.Id" type="button" class="btn btn-link js-delete">Delete</button>
+                    </th>
                 </tr>
             }
         </tbody>
     </table>
 }
+@section scripts
+    {
+        <script>
+            $(document).ready(function () {
+                $("#pozajmice .js-delete").on("click", function () {
+                    var button = $(this);
+
+                    bootbox.confirm("Da li zeljite da izbrisete pozajmicu?", function (result) {
+                        if (result) {
+                            $.ajax({
+                                url: "https://localhost:44320/api/pozajmica/" + button.attr("data-pozajmica-id"),
+                                method: "DELETE",
+                                success: function () {
+                                    button.parents("tr").remove();
+                                }
+                            })
+                        }
+                    });
+                    
+                });
+            });
+        </script>
+    }
 
