@@ -11,9 +11,13 @@ namespace Videoteka.Models
         public int Id { get; set; }
 
         public Kupac Kupac { get; set; }
+
+        [Display(Name = "Kupac")]
         public int KupacId { get; set; }
 
         public Film Film { get; set; }
+
+        [Display(Name = "Film")]
         public int FilmId { get; set; }
 
         public DateTime? DatumPozajmice { get; set; }

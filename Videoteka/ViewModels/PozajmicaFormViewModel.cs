@@ -17,9 +17,9 @@ namespace Videoteka.ViewModels
             get
             {
                 if (Pozajmica != null && Pozajmica.Id != 0)
-                    return "Izmijeni Film";
+                    return "Izmijeni Pozajmicu";
                 else
-                    return "Novi Film";
+                    return "Novi Pozajmica";
             }
         }
     }

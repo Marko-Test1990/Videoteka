@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Web;
 using System.Web.Mvc;
 using Videoteka.Models;
+using Videoteka.ViewModels;
 
 namespace Videoteka.Controllers
 {
@@ -30,7 +31,18 @@ namespace Videoteka.Controllers
             
         }
 
-       
+        public ActionResult Nova()
+        {
+            var kupac = _context.Kupci.ToList();
+            var film = _context.Films.ToList();
+            var viewModel = new PozajmicaFormViewModel
+            {   
+                Kupci= kupac,
+                Filmovi=film
+                
+            };
+            return View(viewModel);
+        }
 
 
     }

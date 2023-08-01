@@ -355,6 +355,7 @@
     <Content Include="Views\Kupac\Novi.cshtml" />
     <Content Include="Views\Film\Novi.cshtml" />
     <Content Include="Views\Pozajmica\Index.cshtml" />
+    <Content Include="Views\Pozajmica\Nova.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
