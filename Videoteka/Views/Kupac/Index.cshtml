@@ -14,7 +14,7 @@
 }
 else
 {
-    <table class="table table-bordered table-hover">
+    <table id="kupci" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Kupci</th>
@@ -22,6 +22,7 @@ else
                 <th>Datum Rodjenja</th>
                 <th>Tip Kupca</th>
                 <th>Tip Clanstva</th>
+                <th>Izbrisi</th>
             </tr>
         </thead>
         <tbody>
@@ -33,9 +34,35 @@ else
                     <td>@kupci.DatumRodjenja</td>
                     <td>@kupci.TipKupca.Naziv</td>
                     <td>@kupci.TipClanstva.Naziv</td>
+                    <th>
+                        <button data-kupac-id="@kupci.Id" type="button" class="btn btn-link js-delete">Delete</button>
+                    </th>
                 </tr>
             }
         </tbody>
     </table>
+}
+@section scripts
+    {
+    <script>
+            $(document).ready(function () {
+                $("#kupci .js-delete").on("click", function () {
+                    var button = $(this);
+
+                    bootbox.confirm("Da li zeljite da izbrisete kupca?", function (result) {
+                        if (result) {
+                            $.ajax({
+                                url: "https://localhost:44320/api/kupci/" + button.attr("data-kupac-id"),
+                                method: "DELETE",
+                                success: function () {
+                                    button.parents("tr").remove();
+                                }
+                            })
+                        }
+                    });
+
+                });
+            });
+    </script>
 }
 

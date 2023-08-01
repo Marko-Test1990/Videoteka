@@ -13,7 +13,7 @@
 }
 else
 {
-    <table class="table table-bordered table-hover">
+    <table id="filmovi" class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Filmovi</th>
@@ -22,6 +22,7 @@ else
                 <th>Datum Izdanja</th>
                 <th>Broj na Stanju</th>
                 <th>Broj Dostupnih</th>
+                <th>Izbrisi</th>
             </tr>
         </thead>
         <tbody>
@@ -34,8 +35,34 @@ else
                     <td>@filmovi.DatumIzdanja</td>
                     <td>@filmovi.BrojNaStanju</td>
                     <td>@filmovi.BrojDostupnih</td>
+                    <th>
+                        <button data-filmovi-id="@filmovi.Id" type="button" class="btn btn-link js-delete">Delete</button>
+                    </th>
                 </tr>
             }
         </tbody>
     </table>
+}
+@section scripts
+    {
+    <script>
+            $(document).ready(function () {
+                $("#filmovi .js-delete").on("click", function () {
+                    var button = $(this);
+
+                    bootbox.confirm("Da li zeljite da izbrisete film?", function (result) {
+                        if (result) {
+                            $.ajax({
+                                url: "https://localhost:44320/api/film/" + button.attr("data-filmovi-id"),
+                                method: "DELETE",
+                                success: function () {
+                                    button.parents("tr").remove();
+                                }
+                            })
+                        }
+                    });
+
+                });
+            });
+    </script>
 }
