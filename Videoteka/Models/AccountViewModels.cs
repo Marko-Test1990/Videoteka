@@ -64,30 +64,30 @@ namespace Videoteka.Models
 
     public class RegisterViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Adresa je obavezna")]
         [StringLength(255)]
         [Display(Name = "Adresa")]
         public string Adresa { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Broj telefona je obavezan")]
         [StringLength(50)]
         [Display(Name = "Broj Telefona")]
         public string Telefon { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Email adresa je obavezna")]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required(ErrorMessage = "Lozinka je obavezna")]
+        [StringLength(100, ErrorMessage = "{0} mora biti barem {2} karaktera dugačka.", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Lozinka")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Potvrdite Lozinku")]
+        [Compare("Password", ErrorMessage = "Lozinka i Potvrdjena Lozinka se ne poklapaju.")]
         public string ConfirmPassword { get; set; }
     }
 
