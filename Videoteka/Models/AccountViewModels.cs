@@ -65,6 +65,16 @@ namespace Videoteka.Models
     public class RegisterViewModel
     {
         [Required]
+        [StringLength(255)]
+        [Display(Name = "Adresa")]
+        public string Adresa { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        [Display(Name = "Broj Telefona")]
+        public string Telefon { get; set; }
+
+        [Required]
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }

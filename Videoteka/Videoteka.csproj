@@ -258,6 +258,10 @@
     <Compile Include="Migrations\202307302100296_FilmNazivIKupacImeRequired.designer.cs">
       <DependentUpon>202307302100296_FilmNazivIKupacImeRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308031702300_DodavanjeAdreseITelefonaTabeliAspNetUsers.cs" />
+    <Compile Include="Migrations\202308031702300_DodavanjeAdreseITelefonaTabeliAspNetUsers.designer.cs">
+      <DependentUpon>202308031702300_DodavanjeAdreseITelefonaTabeliAspNetUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Film.cs" />
@@ -438,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202307302100296_FilmNazivIKupacImeRequired.resx">
       <DependentUpon>202307302100296_FilmNazivIKupacImeRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202308031702300_DodavanjeAdreseITelefonaTabeliAspNetUsers.resx">
+      <DependentUpon>202308031702300_DodavanjeAdreseITelefonaTabeliAspNetUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
