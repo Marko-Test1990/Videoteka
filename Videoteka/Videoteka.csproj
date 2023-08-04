@@ -376,12 +376,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Film\Index.cshtml" />
     <Content Include="Views\Kupac\Index.cshtml" />
-    <Content Include="Views\Kupac\Detalji.cshtml" />
-    <Content Include="Views\Film\Detalji.cshtml" />
     <Content Include="Views\Kupac\Novi.cshtml" />
     <Content Include="Views\Film\Novi.cshtml" />
     <Content Include="Views\Pozajmica\Index.cshtml" />
-    <Content Include="Views\Pozajmica\Nova.cshtml" />
     <Content Include="Views\NovaPozajmica\NovaPozajmica.cshtml" />
   </ItemGroup>
   <ItemGroup>

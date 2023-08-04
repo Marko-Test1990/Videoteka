@@ -36,17 +36,8 @@ namespace Videoteka.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Sacuvaj(Film film)
-        {
-            if (!ModelState.IsValid)
-            {
-                var viewModel = new FilmFormViewModel
-                {
-                    film = film,
-                    Zanrovi= _context.Zanrovi.ToList()                    
-                };
-
-                return View("Novi", viewModel);
-            }
+        {   
+            
             if (film.Id == 0)
                 _context.Films.Add(film);
             else
@@ -65,6 +56,7 @@ namespace Videoteka.Controllers
             return RedirectToAction("Index", "Film");
         }
         // GET: Film
+        
         public ActionResult Index()
         {
             var film = _context.Films.Include(c => c.Zanr).ToList();
@@ -72,16 +64,8 @@ namespace Videoteka.Controllers
             return View(film);
         }
 
-        public ActionResult Detalji(int id)
-        {
-            var film = _context.Films.SingleOrDefault(c => c.Id == id);
 
-            if (film == null)
-                return HttpNotFound();
-
-            return View(film);
-        }
-
+        
         public ActionResult Izmjena(int id)
         {
             var film = _context.Films.SingleOrDefault(c => c.Id == id);

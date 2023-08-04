@@ -22,7 +22,7 @@ namespace Videoteka.Controllers
         {
             _context.Dispose();
         }
-        // GET: Pozajmica  .Include(c => c.Kupac).Include(c => c.Film)
+        // GET: Pozajmica  
         public ActionResult Index()
         {
             var pozajmica = _context.pozajmice.Include(c => c.Kupac).Include(c => c.Film).ToList();
@@ -30,20 +30,7 @@ namespace Videoteka.Controllers
             return View(pozajmica);
             
         }
-
-        public ActionResult Nova()
-        {
-            var kupac = _context.Kupci.ToList();
-            var film = _context.Films.ToList();
-            var viewModel = new PozajmicaFormViewModel
-            {   
-                Kupci= kupac,
-                Filmovi=film
-                
-            };
-            return View(viewModel);
-        }
-
+        
 
     }
 }

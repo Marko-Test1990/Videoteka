@@ -39,18 +39,8 @@ namespace Videoteka.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Sacuvaj(Kupac kupac) 
-        {
-            if (!ModelState.IsValid) 
-            {
-                var viewModel = new KupacFormViewModel
-                {
-                    kupac = kupac,
-                    tipClanstvas = _context.TipClanstava.ToList(),
-                    tipKupcas = _context.tipKupcas.ToList()
-                };
-
-                return View("Novi",viewModel);
-            }
+        {   
+            
             if(kupac.Id==0)
                 _context.Kupci.Add(kupac);
             else 
@@ -75,15 +65,7 @@ namespace Videoteka.Controllers
             return View(kupac);
         }
 
-        public ActionResult Detalji(int id)
-        {
-            var kupac = _context.Kupci.SingleOrDefault(c => c.Id == id);
-
-            if (kupac == null)
-                return HttpNotFound();
-
-            return View(kupac);
-        }
+        
         public ActionResult Izmjena (int id) 
         {
             var kupac = _context.Kupci.SingleOrDefault(c => c.Id == id);

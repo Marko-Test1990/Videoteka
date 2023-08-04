@@ -42,27 +42,28 @@ else
             }
         </tbody>
     </table>
+    
 }
 @section scripts
     {
     <script>
-            $(document).ready(function () {
-                $("#filmovi .js-delete").on("click", function () {
-                    var button = $(this);
+        $(document).ready(function () {
+            $("#filmovi .js-delete").on("click", function () {
+                var button = $(this);
 
-                    bootbox.confirm("Da li zeljite da izbrisete film?", function (result) {
-                        if (result) {
-                            $.ajax({
-                                url: "https://localhost:44320/api/film/" + button.attr("data-filmovi-id"),
-                                method: "DELETE",
-                                success: function () {
-                                    button.parents("tr").remove();
-                                }
-                            })
-                        }
-                    });
-
+                bootbox.confirm("Da li zeljite da izbrisete film?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "https://localhost:44320/api/filmovi/" + button.attr("data-filmovi-id"),
+                            method: "DELETE",
+                            success: function () {
+                                button.parents("tr").remove();
+                            }
+                        })
+                    }
                 });
+
             });
+        });
     </script>
 }

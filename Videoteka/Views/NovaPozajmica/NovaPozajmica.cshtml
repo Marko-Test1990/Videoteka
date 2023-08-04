@@ -29,7 +29,7 @@
     <div class="form-group">
         <label for="date">Datum</label>
         <input id="date" name="date" type="datetime-local" value="" class="form-control" required />
-        <span id="date-error" class="text-danger" style="display: none;">Morate unijeti datum iznajmljivanja.</span>
+        <span id="date-error" class="text-danger" style="display: none;">Morate unijeti datum i vrijeme iznajmljivanja.</span>
     </div>
 
 
@@ -146,7 +146,7 @@
                 $.ajax({
                     url: "https://localhost:44320/api/NovaPozajmica/",
                     method: "POST",
-                    //dataType: "json",
+                    
                     contentType: "application/json",
                     data: JSON.stringify(rentalData),
                     headers: headers,
@@ -161,7 +161,7 @@
                            
                         };
                         toastr.success(rentalData.message);
-                        //alert(data);
+                        
 
                         $("#customer").val("");
                         $("#movie").val("");
@@ -171,7 +171,7 @@
                     .fail(function (xhr, status, error) {
                         console.error("AJAX Error:", error);
                         alert('error :: ' + eval(error));
-                        //alert(data);
+                        
 
                         toastr.error("Desila se greška prilikom iznajmljivanja filma.");
                     });

@@ -33,32 +33,7 @@ namespace Videoteka.Controllers.Api
 
             return Ok(pozajmica);
         }
-
-        [HttpPost]
-        public IHttpActionResult CreatePozajmica(Pozajmica pozajmica) 
-        {
-            if(!ModelState.IsValid) 
-            {
-                return BadRequest();
-            }
-
-            _context.pozajmice.Add(pozajmica);
-            _context.SaveChanges();
-            return Created(new Uri(Request.RequestUri + "/" + pozajmica.Id),pozajmica);
-        }
-
-        //Remove Later?
-        /*public void UpdatePozajmica(int id, Pozajmica pozajmica) 
-        {
-            var pozajmicaUDb = _context.pozajmice.SingleOrDefault(c => c.Id == id);
-
-            if (pozajmicaUDb == null)
-            {
-                throw new HttpResponseException(HttpStatusCode.NotFound);
-            }
-
-
-        }*/
+        
 
         [HttpDelete]
         public IHttpActionResult DeletePozajmica (int id) 

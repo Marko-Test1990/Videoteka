@@ -22,7 +22,7 @@ namespace Videoteka.Controllers.Api
         [HttpPost]
         public IHttpActionResult CreateNovePozajmice (PozajmicaDto pozajmicaDto) 
         {
-            //throw new NotImplementedException();
+            
 
             var kupac = _context.Kupci.FirstOrDefault(c => c.Id == pozajmicaDto.KupacId);
 
@@ -38,7 +38,7 @@ namespace Videoteka.Controllers.Api
             {
                 KupacId = pozajmicaDto.KupacId,
                 FilmId = pozajmicaDto.FilmId,
-                DatumPozajmice = Convert.ToDateTime(pozajmicaDto.DatumPozajmice), //pozajmicaDto.DatumPozajmice,
+                DatumPozajmice = Convert.ToDateTime(pozajmicaDto.DatumPozajmice), 
                 Napomena = pozajmicaDto.Napomena
             };
 
