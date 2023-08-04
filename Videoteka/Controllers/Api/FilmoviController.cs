@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Videoteka.Models;
+using Videoteka.Models.Dtos;
 
 namespace Videoteka.Controllers.Api
 {
@@ -17,9 +18,17 @@ namespace Videoteka.Controllers.Api
             _context = new ApplicationDbContext();
         }
         
-        public IEnumerable<Film> GetFilmovi()
+        public IHttpActionResult GetFilmovi()
         {
-            return _context.Films.ToList();
+            var movies = _context.Films.Where(x => x.BrojDostupnih > 0).Select(x => new FilmDto
+            {
+                Id = x.Id,
+                Naziv = x.Naziv
+            }).ToList();
+
+            return Ok(movies);
+
+            
         }
 
         public IHttpActionResult GetFilm(int id)

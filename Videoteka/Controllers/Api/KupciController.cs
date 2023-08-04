@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Videoteka.Models;
+using Videoteka.Models.Dtos;
 
 namespace Videoteka.Controllers.Api
 {
@@ -18,9 +20,18 @@ namespace Videoteka.Controllers.Api
         }
 
 
-        public IEnumerable<Kupac> GetKupci()
+        public IHttpActionResult GetKupci()
         {
-            return _context.Kupci.ToList();
+            var kupci = _context.Kupci.Select(x=> new KupacDto 
+                {
+                    Id = x.Id,
+                    Ime = x.Ime,
+                }
+            ).ToList();
+
+            ;
+
+            return Ok(kupci);
         }
 
         public IHttpActionResult GetKupac(int id)
